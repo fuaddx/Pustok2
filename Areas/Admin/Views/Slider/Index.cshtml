@@ -2,12 +2,11 @@
 @{
     ViewData["Title"] = "Slider";
 }
-@section style{
+@section styles{
     <link href="~/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 }
 @section scripts{
     <script src="~/admin/js/demo/datatables-demo.js"></script>
-
     @if (TempData["Response"] != null)
     {
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -15,7 +14,7 @@
         {
             <script>
                 Swal.fire({
-                    position: "center",
+                    position: "top-end",
                     icon: "success",
                     title: "Data deleted",
                     showConfirmButton: false,
@@ -27,7 +26,7 @@
         {
             <script>
                 Swal.fire({
-                    position: "center",
+                    position: "top-end",
                     icon: "error",
                     title: "Something went wrong",
                     showConfirmButton: false,
@@ -36,65 +35,6 @@
             </script>
         }
     }
-    @if (TempData["Salam"] != null)
-    {
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        @if ((bool)TempData["Salam"] == true)
-        {
-            <script>
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Data Uptaded!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            </script>
-        }
-        @if ((bool)TempData["Salam"] == false)
-        {
-            <script>
-                Swal.fire({
-                    position: "center",
-                    icon: "error",
-                    title: "Nothing Uptaded",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            </script>
-        }
-    }
-
-    @if (TempData["Created"] != null)
-    {
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        @if ((bool)TempData["Created"] == true)
-        {
-            <script>
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Data Created!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            </script>
-        }
-        @if ((bool)TempData["Created"] == false)
-        {
-            <script>
-                Swal.fire({
-                    position: "center",
-                    icon: "error",
-                    title: "Nothing Created!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            </script>
-        }
-    }
-
-        
 }
 <div class="card shadow mb-4">
     <div class="card-header py-3">

@@ -1,5 +1,5 @@
-﻿@using Pustok2.Models;
-@model List<Slider>
+﻿@using Pustok2.Models
+@model Pustok2.ModelClass.ProductSliderVM
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -32,7 +32,7 @@
                             "dots":true
                             }'>
 
-                    @foreach (var slider in Model)
+                    @foreach (Slider slider in Model.Sliders)
                     {
                 <div class="single-slide bg-shade-whisper  ">
                         <div class="single-slide bg-ghost-white">
